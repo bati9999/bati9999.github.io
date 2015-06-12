@@ -1,0 +1,393 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Wordpress笔记：用Poedit新建po文件，翻译主题 | 巴蒂的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="bati9999">
+    
+    <meta name="description" content="下载了一个主题，用Poedit翻译自带的po文件,启用后发现有两个词还显示英文，而其它的词正常。怎么回事呢？会不会是po文件的问题？在源代码中搜索翻译的原字符串没找到，显然是作者改了源码后未更新po文件。只好自己新建po文件解决。下面是新建po文件的步骤：
+1、下载安装poedit程序poedit官">
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml## RSS address." title="巴蒂的博客" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/catman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/catman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?null";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="巴蒂的博客" title="巴蒂的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="巴蒂的博客">巴蒂的博客</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/10/wprdpres-poedit/" title="Wordpress笔记：用Poedit新建po文件，翻译主题" itemprop="url">Wordpress笔记：用Poedit新建po文件，翻译主题</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://818cad.com" title="bati9999">bati9999</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-10-04T14:52:55.000Z" itemprop="datePublished">2014-10-04</time>
+    更新日期:<time datetime="2015-06-12T14:35:51.000Z" itemprop="dateModified">2015-06-12</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、下载安装poedit程序"><span class="toc-number">1.</span> <span class="toc-text">1、下载安装poedit程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、运行poedit程序，菜单—文件—新建编目"><span class="toc-number">2.</span> <span class="toc-text">2、运行poedit程序，菜单—文件—新建编目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、设置编目属性-翻译属性"><span class="toc-number">3.</span> <span class="toc-text">3、设置编目属性-翻译属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、设置基础路径和源路径"><span class="toc-number">4.</span> <span class="toc-text">4、设置基础路径和源路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、设置源关键字"><span class="toc-number">5.</span> <span class="toc-text">5、设置源关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、生成po文件"><span class="toc-number">6.</span> <span class="toc-text">6、生成po文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、翻译为mo文件"><span class="toc-number">7.</span> <span class="toc-text">7、翻译为mo文件</span></a></li></ol>
+		</div>
+		
+		<p>下载了一个主题，用Poedit翻译自带的po文件,启用后发现有两个词还显示英文，而其它的词正常。怎么回事呢？会不会是po文件的问题？在源代码中搜索翻译的原字符串没找到，显然是作者改了源码后未更新po文件。只好自己新建po文件解决。下面是新建po文件的步骤：</p>
+<h4 id="1、下载安装poedit程序">1、下载安装poedit程序</h4><p><a href="http://poedit.net/" target="_blank" rel="external">poedit官方网站</a></p>
+<h4 id="2、运行poedit程序，菜单—文件—新建编目">2、运行poedit程序，菜单—文件—新建编目</h4><h4 id="3、设置编目属性-翻译属性">3、设置编目属性-翻译属性</h4><p>重要的是复数形式，其它的随便填，“语言”最好写“中文”，当然写其它也不会出错。字符集填UTF-8，源码字符集不必填，可以自动识别。最终要翻译成中文，那复数形式填：nplurals=1; plural=0;  从poedit官网有各种语言复数形式的列表（<a href="http://translate.sourceforge.net/wiki/l10n/pluralforms" target="_blank" rel="external">POEDIT复数形式列表地址）</a>不过最近几天上不去了。<br><a href="http://818cad.com/wp-content/uploads/2014/10/po_main.jpg"><img src="http://818cad.com/wp-content/uploads/2014/10/po_main.jpg" alt="poedit 编目（po文件）属性"></a></p>
+<h4 id="4、设置基础路径和源路径">4、设置基础路径和源路径</h4><p>基础路径填要翻译的主题的根目录，源路径增加一个项目“.”（注意是半角字符的一个点）<br><a href="http://818cad.com/wp-content/uploads/2014/10/po_path.jpg"><img src="http://818cad.com/wp-content/uploads/2014/10/po_path.jpg" alt="poedit基础路径设置"></a></p>
+<h4 id="5、设置源关键字">5、设置源关键字</h4><p>确保有”__”（双下划线）、”_e”、“_x”（图中的前三项）<br><a href="http://818cad.com/wp-content/uploads/2014/10/po_keyword.jpg"><img src="http://818cad.com/wp-content/uploads/2014/10/po_keyword.jpg" alt="poedit源关键字设置"></a></p>
+<h4 id="6、生成po文件">6、生成po文件</h4><p>点击确认，程序会搜索源文件，然后提示找到编目中不存在的项目，选择确定，po文件就生成了。然后保存（图一所示按钮），文件名可以随便写一个，最好是写”zh_CN.po”，这样省事一点。保存至主题的languages文件夹。</p>
+<h4 id="7、翻译为mo文件">7、翻译为mo文件</h4><p>逐条翻译条目，注意保留%开头的格式符，如：”Month: %s”翻译为“月份: %s”。可以翻译一部分，不一定要全部翻译，也可以正常工作。最后再点“保存”按钮，程序会自动生成一个同名的mo文件，我们需要languages文件夹有一个”zh_CN.mo”的文件（名称和wordpress语言定义对应），在系统文件夹把mo文件改好。如前面po文件名是“zh_CN.po”，就省去改名了。这样就大功告成！</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/wordpress/">wordpress</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/建站笔记/">建站笔记</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://818cad.com/2014/10/wprdpres-poedit/" data-title="Wordpress笔记：用Poedit新建po文件，翻译主题 | 巴蒂的博客" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/10/wordpress-revisions-autosave/" title="Wordpress笔记: 修订版本(Revisions)和自动保存(Autosave)">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  Wordpress笔记: 修订版本(Revisions)和自动保存(Autosave)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/09/autocad-tips-xref-print/"  title="AutoCAD使用技巧-用外部参照（xref）拼图打印">
+ <strong>NEXT:</strong><br/> 
+ <span>AutoCAD使用技巧-用外部参照（xref）拼图打印
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、下载安装poedit程序"><span class="toc-number">1.</span> <span class="toc-text">1、下载安装poedit程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、运行poedit程序，菜单—文件—新建编目"><span class="toc-number">2.</span> <span class="toc-text">2、运行poedit程序，菜单—文件—新建编目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、设置编目属性-翻译属性"><span class="toc-number">3.</span> <span class="toc-text">3、设置编目属性-翻译属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、设置基础路径和源路径"><span class="toc-number">4.</span> <span class="toc-text">4、设置基础路径和源路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、设置源关键字"><span class="toc-number">5.</span> <span class="toc-text">5、设置源关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、生成po文件"><span class="toc-number">6.</span> <span class="toc-text">6、生成po文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、翻译为mo文件"><span class="toc-number">7.</span> <span class="toc-text">7、翻译为mo文件</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">標簽雲</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/AutoCAD/" style="font-size: 20px;">AutoCAD</a> <a href="/tags/AutoLISP/" style="font-size: 15px;">AutoLISP</a> <a href="/tags/CAD软件/" style="font-size: 10px;">CAD软件</a> <a href="/tags/ODA/" style="font-size: 10px;">ODA</a> <a href="/tags/PowerPoint/" style="font-size: 10px;">PowerPoint</a> <a href="/tags/UG/" style="font-size: 10px;">UG</a> <a href="/tags/VBA/" style="font-size: 15px;">VBA</a> <a href="/tags/WORD/" style="font-size: 10px;">WORD</a> <a href="/tags/opera-浏览器/" style="font-size: 10px;">opera 浏览器</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/图层/" style="font-size: 10px;">图层</a>
+    </div>
+  </div>
+
+
+  
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分類</p>
+		<ul>
+		
+			<li><a href="/categories/AutoCAD/" title="AutoCAD">AutoCAD<sup>2</sup></a></li>
+		
+			<li><a href="/categories/AutoLISP程序/" title="AutoLISP程序">AutoLISP程序<sup>2</sup></a></li>
+		
+			<li><a href="/categories/CAD综合/" title="CAD综合">CAD综合<sup>5</sup></a></li>
+		
+			<li><a href="/categories/OfficeVBA/" title="OfficeVBA">OfficeVBA<sup>2</sup></a></li>
+		
+			<li><a href="/categories/常用软件/" title="常用软件">常用软件<sup>3</sup></a></li>
+		
+			<li><a href="/categories/建站笔记/" title="建站笔记">建站笔记<sup>2</sup></a></li>
+		
+			<li><a href="/categories/未分类/" title="未分类">未分类<sup>1</sup></a></li>
+		
+			<li><a href="/categories/随笔/" title="随笔">随笔<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">標簽</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/AutoCAD/" title="AutoCAD">AutoCAD<sup>3</sup></a></li>
+		
+			<li><a href="/tags/AutoLISP/" title="AutoLISP">AutoLISP<sup>2</sup></a></li>
+		
+			<li><a href="/tags/CAD软件/" title="CAD软件">CAD软件<sup>1</sup></a></li>
+		
+			<li><a href="/tags/ODA/" title="ODA">ODA<sup>1</sup></a></li>
+		
+			<li><a href="/tags/PowerPoint/" title="PowerPoint">PowerPoint<sup>1</sup></a></li>
+		
+			<li><a href="/tags/UG/" title="UG">UG<sup>1</sup></a></li>
+		
+			<li><a href="/tags/VBA/" title="VBA">VBA<sup>2</sup></a></li>
+		
+			<li><a href="/tags/WORD/" title="WORD">WORD<sup>1</sup></a></li>
+		
+			<li><a href="/tags/opera-浏览器/" title="opera 浏览器">opera 浏览器<sup>1</sup></a></li>
+		
+			<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>1</sup></a></li>
+		
+			<li><a href="/tags/图层/" title="图层">图层<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情鏈接</p>
+    <ul>
+      
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 机械工程师 业余码农 <br/>
+			CAD技术交流</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/bati9999" target="_blank" title="weibo"></a>
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/leaf-hsiao/catman" target="_blank" title="Catman">Catman</a> © 2015 
+		
+		<a href="http://818cad.com" target="_blank" title="bati9999">bati9999</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,208-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      m = $('#main'),
+      a = $('#asidepart'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  m.addClass('moveMain');
+  a.css('display', 'none').addClass('fadeIn');
+  o.css('display', 'block');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    ta.css('display', 'block').addClass('fadeIn');
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,250-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
