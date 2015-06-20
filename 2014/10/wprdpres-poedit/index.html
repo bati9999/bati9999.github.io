@@ -87,7 +87,7 @@ var _hmt = _hmt || [];
     </p>
   <p class="article-time">
     <time datetime="2014-10-04T14:52:55.000Z" itemprop="datePublished">2014-10-04</time>
-    更新日期:<time datetime="2015-06-12T14:35:51.000Z" itemprop="dateModified">2015-06-12</time>
+    更新日期:<time datetime="2015-06-20T15:48:56.000Z" itemprop="dateModified">2015-06-20</time>
     
   </p>
 </header>
@@ -101,9 +101,9 @@ var _hmt = _hmt || [];
 		
 		<p>下载了一个主题，用Poedit翻译自带的po文件,启用后发现有两个词还显示英文，而其它的词正常。怎么回事呢？会不会是po文件的问题？在源代码中搜索翻译的原字符串没找到，显然是作者改了源码后未更新po文件。只好自己新建po文件解决。下面是新建po文件的步骤：</p>
 <h4 id="1、下载安装poedit程序">1、下载安装poedit程序</h4><p><a href="http://poedit.net/" target="_blank" rel="external">poedit官方网站</a></p>
-<h4 id="2、运行poedit程序，菜单—文件—新建编目">2、运行poedit程序，菜单—文件—新建编目</h4><h4 id="3、设置编目属性-翻译属性">3、设置编目属性-翻译属性</h4><p>重要的是复数形式，其它的随便填，“语言”最好写“中文”，当然写其它也不会出错。字符集填UTF-8，源码字符集不必填，可以自动识别。最终要翻译成中文，那复数形式填：nplurals=1; plural=0;  从poedit官网有各种语言复数形式的列表（<a href="http://translate.sourceforge.net/wiki/l10n/pluralforms" target="_blank" rel="external">POEDIT复数形式列表地址）</a>不过最近几天上不去了。<br><a href="http://818cad.com/wp-content/uploads/2014/10/po_main.jpg"><img src="http://818cad.com/wp-content/uploads/2014/10/po_main.jpg" alt="poedit 编目（po文件）属性"></a></p>
-<h4 id="4、设置基础路径和源路径">4、设置基础路径和源路径</h4><p>基础路径填要翻译的主题的根目录，源路径增加一个项目“.”（注意是半角字符的一个点）<br><a href="http://818cad.com/wp-content/uploads/2014/10/po_path.jpg"><img src="http://818cad.com/wp-content/uploads/2014/10/po_path.jpg" alt="poedit基础路径设置"></a></p>
-<h4 id="5、设置源关键字">5、设置源关键字</h4><p>确保有”__”（双下划线）、”_e”、“_x”（图中的前三项）<br><a href="http://818cad.com/wp-content/uploads/2014/10/po_keyword.jpg"><img src="http://818cad.com/wp-content/uploads/2014/10/po_keyword.jpg" alt="poedit源关键字设置"></a></p>
+<h4 id="2、运行poedit程序，菜单—文件—新建编目">2、运行poedit程序，菜单—文件—新建编目</h4><h4 id="3、设置编目属性-翻译属性">3、设置编目属性-翻译属性</h4><p>重要的是复数形式，其它的随便填，“语言”最好写“中文”，当然写其它也不会出错。字符集填UTF-8，源码字符集不必填，可以自动识别。最终要翻译成中文，那复数形式填：nplurals=1; plural=0;  从poedit官网有各种语言复数形式的列表（<a href="http://translate.sourceforge.net/wiki/l10n/pluralforms" target="_blank" rel="external">POEDIT复数形式列表地址）</a>不过最近几天上不去了。<br>[<img src="images/po_main.jpg" alt="poedit 编目（po文件）属性"></p>
+<h4 id="4、设置基础路径和源路径">4、设置基础路径和源路径</h4><p>基础路径填要翻译的主题的根目录，源路径增加一个项目“.”（注意是半角字符的一个点）<br>[<img src="images/po_path.jpg" alt="poedit基础路径设置"></p>
+<h4 id="5、设置源关键字">5、设置源关键字</h4><p>确保有”__”（双下划线）、”_e”、“_x”（图中的前三项）<br>[<img src="images/po_keyword.jpg" alt="poedit源关键字设置"></p>
 <h4 id="6、生成po文件">6、生成po文件</h4><p>点击确认，程序会搜索源文件，然后提示找到编目中不存在的项目，选择确定，po文件就生成了。然后保存（图一所示按钮），文件名可以随便写一个，最好是写”zh_CN.po”，这样省事一点。保存至主题的languages文件夹。</p>
 <h4 id="7、翻译为mo文件">7、翻译为mo文件</h4><p>逐条翻译条目，注意保留%开头的格式符，如：”Month: %s”翻译为“月份: %s”。可以翻译一部分，不一定要全部翻译，也可以正常工作。最后再点“保存”按钮，程序会自动生成一个同名的mo文件，我们需要languages文件夹有一个”zh_CN.mo”的文件（名称和wordpress语言定义对应），在系统文件夹把mo文件改好。如前面po文件名是“zh_CN.po”，就省去改名了。这样就大功告成！</p>
   
